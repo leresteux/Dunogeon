@@ -16,10 +16,10 @@ mettre les points d att et de vie pour joueur et monstre
 void DUNOGEON::begin(){
  //set up Arduino
  randomSeed(analogRead(A0)+analogRead(A1)+analogRead(A2));
- Serial.begin(9600);
+ Serial.begin(115200);
  pinMode(LED_BUILTIN, OUTPUT);
 //set dunogeon
- rooms = random(5)+5;// nombre de salle a effectué   
+ rooms = random(6)+5;// nombre de salle a effectué   
  for (uint8_t i = rooms ; i>0 ; i--){
   meet[i] = random(10);
  }
@@ -30,6 +30,8 @@ void DUNOGEON::begin(){
 
 void DUNOGEON::quest(){
  Serial.println(F("Bienvenu.e dans le DUNOGEON !"));
+ delay(breakTime);
+ Serial.println(F("!!Attention ce programme fonction avec une vitesse 115200 pour le moniteur série!!"));
  delay(breakTime);
  Serial.println(F("Tu devras survivre dans ce donjon, allant de 5 à 10 salles."));
  delay(3000);
