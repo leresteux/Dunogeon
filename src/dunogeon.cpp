@@ -1,9 +1,4 @@
 
-/*
-
-mettre les points d att et de vie pour joueur et monstre
-
-*/
 
 #include "dunogeon.h"
 #include "Arduino.h"
@@ -55,7 +50,7 @@ Serial.println(F("- Je t'attendais…"));
 delay(5000);
 Serial.println(F("...félicitation!"));
 delay(breakTime); 
-Serial.println(F("- Car tu es admis à la plus grande des Guildes, tu vas pouvoir rejoindre les [insérer ce qui vous plaît] "));
+Serial.println(F("- Car tu es admis à la plus grande des Guildes, tu vas pouvoir rejoindre les [insérer ce qui vous plaît :p ] "));
 Serial.println();
 delay(breakTime);
 Serial.print(F("F"));delay(breakTime);Serial.print(F("I"));delay(breakTime);Serial.println(F("N"));
@@ -73,6 +68,7 @@ while(1);
   }else{
     
    chapitre;
+   delay(10);
    roomDescription();
  //tableau de rencontre(de 0 à 9) : 0-1=vide ; 2-5=monstres ; 6-7 =piège ; 8-9 = trésor
    switch (meet[actualRoom]) {
@@ -100,6 +96,7 @@ while(1);
 
 void DUNOGEON::emptyRoomMeet(){
 R=random(5);
+delay(10);
  switch (R) {
   case 0 :
   Serial.println(F("Hormis de la poussière...Rien."));
@@ -126,6 +123,7 @@ R=random(5);
 
 void DUNOGEON::monsterMeet(){
  R=random(5);
+ delay(10);
  switch (R) {
   case 0 :
   Serial.println(F("Un squelette s'avance vers vous... Le regard vide."));
@@ -165,6 +163,7 @@ delay(breakTime);
 
 void DUNOGEON::trapMeet(){
 R=random(5);
+delay(10);
  switch (R) {
   case 0 :
   Serial.println(F("Une trappe s'ouvre sous vos pieds."));
@@ -189,6 +188,7 @@ R=random(5);
 
 void DUNOGEON::tresorMeet(){
 R=random(5);
+delay(10);
  switch (R) {
   case 0 :
   Serial.println(F("Vous trouvez une fraise TAGADA au sol. Vous la ramassez et l'engloutissez."));
@@ -224,10 +224,11 @@ Serial.println(F("ROUKINOUX TOUJOURS"));
 
 void DUNOGEON::roomDescription(){
  R=random(5);
+ delay(10);
  Serial.print(F("C'est une salle "));
  switch (R) {
   case 0 :
-  Serial.println(F("avec une cheminée et une grande table avec le couvert dressé "));
+  Serial.println(F("avec une cheminée et une grande table avec le couvert dressé."));
    break;
   case 1 :
   Serial.println(F("qui resemble à un petit salon, très poussiéreux"));
