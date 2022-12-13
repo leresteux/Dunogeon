@@ -216,7 +216,7 @@ Serial.println(F("ROUKINOUX TOUJOURS"));
   playerAttack = 3;
    break;
    }
-   if (playerLife>10){playerLife=10};
+   if (playerLife>10){playerLife=10;};
    playerInfos();
 }
 
