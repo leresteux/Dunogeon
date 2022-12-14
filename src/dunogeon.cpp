@@ -1,10 +1,9 @@
 
 
 #include "dunogeon.h"
-#include "Arduino.h"
+
 #define porte Serial.println(F("Quelle porte prenez-vous?"))
 #define chapitre Serial.println();Serial.print(F("Chapitre ")); Serial.println(actualRoom);
-#define breakTime 4000
 #define ligne Serial.println(F("-_-_-_-_-_-_-_-"))
 
 //main void
@@ -25,9 +24,9 @@ void DUNOGEON::begin(){
 
 void DUNOGEON::quest(){
  Serial.println(F("Bienvenu.e dans le DUNOGEON !"));
- delay(breakTime);
+breakTime(3000);
  Serial.println(F("!!Attention ce programme fonction avec une vitesse 115200 pour le moniteur série!!"));
- delay(breakTime);
+breakTime(3000);
  Serial.println(F("Tu devras survivre dans ce donjon, allant de 5 à 10 salles."));
  delay(3000);
  Serial.println(F("La LED intégrée au Arduino et liée à la pin 13 représente tes battements de cœurs."));
@@ -40,7 +39,7 @@ void DUNOGEON::quest(){
 
  
  Serial.println(F("Après avoir passé quelques couloirs et pièces mineures, vous arrivez dans une première salle..."));
- delay(breakTime);
+breakTime(3000);
 
  while(1){
   
@@ -49,17 +48,17 @@ void DUNOGEON::quest(){
 Serial.println(F("- Je t'attendais…"));
 delay(5000);
 Serial.println(F("...félicitation!"));
-delay(breakTime); 
+breakTime(3000);
 Serial.println(F("- Car tu es admis à la plus grande des Guildes, tu vas pouvoir rejoindre les [insérer ce qui vous plaît :p ] "));
 Serial.println();
-delay(breakTime);
-Serial.print(F("F"));delay(breakTime);Serial.print(F("I"));delay(breakTime);Serial.println(F("N"));
-delay(breakTime);
+breakTime(3000);
+Serial.print(F("F"));breakTime(3000);;Serial.print(F("I"));breakTime(3000);;Serial.println(F("N"));
+breakTime(3000);
 Serial.println();
 Serial.println(F("Textes : Maëlle L.B. aka Roukinette"));
 Serial.println(F("Codes : Julien L. aka HorriblePère"));
 Serial.println();
-delay(breakTime);
+breakTime(3000);
 Serial.println(F("Licence : cc by nc sa"));
 Serial.println(F("2022"));
 
@@ -106,12 +105,12 @@ delay(10);
   break;
   case 2 :
       Serial.println(F("CHUT! Un bruit..."));
-      delay(breakTime);
+     breakTime(3000);
       Serial.println(F("Ah non, il n'y a rien.")); 
   break;
   case 3 :
      Serial.println(F("Boum!!!"));
-      delay(breakTime);
+     breakTime(3000);
      
      Serial.println(F("Un bout du plafond s'est effondré, mais vous n'êtes pas blessé"));  
   break;
@@ -127,35 +126,35 @@ void DUNOGEON::monsterMeet(){
  switch (R) {
   case 0 :
   Serial.println(F("Un squelette s'avance vers vous... Le regard vide."));
-  delay(breakTime);
+ breakTime(3000);
   monsterFight(1,1);
    break;
   case 1 :
   Serial.println(F("Une tombe, disimulée dans le sol, s’ouvre et un mort-vivant en sort."));
-  delay(breakTime);
+ breakTime(3000);
   monsterFight(2,1);
    break;
   case 2 :
     Serial.println(F("Un vampire s'apprête à vous sauter dessus pour vous mordre au cou!"));
-    delay(breakTime);
+   breakTime(3000);
     monsterFight(2,2);
    break;
   case 3 :
 Serial.print(F("GRRRRRR!!!"));
-delay(breakTime);    
+breakTime(3000);   
 Serial.println(F("Un loup-garou surgit devant vous en grognant!"));
-delay(breakTime);
+breakTime(3000);
    monsterFight(2,2);
    break;
   case 4 : 
 Serial.println(F("La créature la plus terrible que vous connaissiez s'avance vers vous..."));
-delay(breakTime);  
+breakTime(3000); 
 Serial.println(F("Votre père!" ));
-delay(breakTime);  
+breakTime(3000); 
 Serial.println(F("Il répète cette phrase en boucle : ")); 
-delay(breakTime);  
+breakTime(3000); 
 Serial.println(F("FAIS LE LAVE-VAISSELLE, FAIS LE LAVE-VAISSELLE... "));
-delay(breakTime);
+breakTime(3000);
   monsterFight(5,3);
    break;
    }
@@ -205,9 +204,9 @@ delay(10);
    break;
   case 3 :
     Serial.println(F("Vous trouvez une épée avec une gravure : "));
-delay(3000);
+breakTime(3000);
 Serial.println(F("ROUKINOUX UN JOUR"));
-delay(3000);
+breakTime(3000);
 Serial.println(F("ROUKINOUX TOUJOURS"));
    if (playerAttack < 2)
    {playerAttack = 2;}else{Serial.println(F("Pas intéressant pour vous."));}
@@ -411,4 +410,13 @@ if ((millisNow-millisOld) >frequency ){
   }
   return chronoTop;
   
+}
+
+void DUNOGEON::breakTime(uint16_t varBreakTime){
+  uint32_t startTime = millis();
+
+  while(millis()-startTime<varBreakTime){
+
+    playerLed();
+  }
 }
