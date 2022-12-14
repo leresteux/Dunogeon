@@ -28,13 +28,13 @@ breakTime(3000);
  Serial.println(F("!!Attention ce programme fonction avec une vitesse 115200 pour le moniteur série!!"));
 breakTime(3000);
  Serial.println(F("Tu devras survivre dans ce donjon, allant de 5 à 10 salles."));
- delay(3000);
+breakTime(3000);
  Serial.println(F("La LED intégrée au Arduino et liée à la pin 13 représente tes battements de cœurs."));
- delay(3000);
+breakTime(3000);
  Serial.println(F("Utilise le serial pour communiquer avec le DUNOGEON."));
- delay(3000);
+breakTime(3000);
  Serial.println(F("Bonne chance !"));
- delay(3000);
+breakTime(3000);
  ligne;
 
  
@@ -46,7 +46,7 @@ breakTime(3000);
   if (actualRoom==rooms+1){
    Serial.println(F("Bravo,vous êtes sorti du dunogeon. A la sortie vous apercevez une rouquine qui vous accueille en vous disant : "));
 Serial.println(F("- Je t'attendais…"));
-delay(5000);
+breakTime(3000);
 Serial.println(F("...félicitation!"));
 breakTime(3000);
 Serial.println(F("- Car tu es admis à la plus grande des Guildes, tu vas pouvoir rejoindre les [insérer ce qui vous plaît :p ] "));
