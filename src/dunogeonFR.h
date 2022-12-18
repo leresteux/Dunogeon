@@ -1,5 +1,5 @@
-#ifndef dunogeon_h
-#define dunogeon_h
+#ifndef dunogeonFR_h
+#define dunogeonFR_h
 #include "Arduino.h"
 
 class DUNOGEON
@@ -14,7 +14,7 @@ private :
           void playerInfos();
           bool etatLed=0;
           void breakTime(uint16_t varBreakTime);
-// avant en public
+
           uint16_t playerLife = 10;
           uint8_t playerAttack=1;
           uint8_t rooms;// nombre de salle a effectué
