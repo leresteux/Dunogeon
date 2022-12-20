@@ -1,5 +1,5 @@
-#ifndef dunogeonFR_h
-#define dunogeonFR_h
+#ifndef DunogeonFR_h
+#define DunogeonFR_h
 #include "Arduino.h"
 
 class DUNOGEON
