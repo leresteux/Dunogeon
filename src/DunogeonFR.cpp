@@ -27,6 +27,9 @@ void DUNOGEON::quest(){
 breakTime(3000);
  Serial.println(F("!!Attention ce programme fonction avec une vitesse 115200 pour le moniteur série!!"));
 breakTime(3000);
+ Serial.println(F("Les Mots en MAJUSCULE sont utilisables, mais vous devez les rentrer en minuscule."));
+  Serial.println(F("Exemple : pour aller à DROITE, écrivez 'droite' "));
+breakTime(3000);
  Serial.println(F("Tu devras survivre dans ce donjon, allant de 5 à 10 salles."));
 breakTime(3000);
  Serial.println(F("La LED intégrée au Arduino et liée à la pin 13 représente tes battements de cœurs."));
