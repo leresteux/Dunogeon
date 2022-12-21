@@ -1,4 +1,4 @@
-# Dunogeon (a mini fantasy game)
+# Dunogeon (un mini simulateur de donjon pour Arduino)
 
 Cette librairie est un simulateur de  donjon (une partie isolé d'un projet plus grand).
 
@@ -11,7 +11,7 @@ Testable sur : https://wokwi.com/projects/351025274638303826
 ## Copyright
 Lire license.txt
 
-## Changement 
-ces changement sont dans le github mais pas encore dans le Release actuel 
+## Changements 
+Ces changements se trouvent dans ce Github, mais pas dans le Release actuel 
 -lowercase avertissement 
 
