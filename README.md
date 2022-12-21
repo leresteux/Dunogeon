@@ -12,6 +12,7 @@ Testable sur : https://wokwi.com/projects/351025274638303826
 Lire license.txt
 
 ## Changements 
-Ces changements se trouvent dans ce Github, mais pas dans le Release actuel 
+Ces changements se trouvent dans ce Github, mais pas dans le Release actuel
+
 -lowercase avertissement 
 
