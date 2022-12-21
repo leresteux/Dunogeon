@@ -1,12 +1,17 @@
 # Dunogeon (a mini fantasy game)
 
-Arduino library for a mini D&D Game (it's a part of a bigger project).
+Cette librairie est un simulateur de  donjon (une partie isolé d'un projet plus grand).
 
 ## Description
-Install the Library, use the example, play. V0.1 is only in french for the moment.
+Installez la librairie, lancez l'exemple, jouez.
 
 ## Example(s)
-you can try it here : https://wokwi.com/projects/351025274638303826
+Testable sur : https://wokwi.com/projects/351025274638303826
 
 ## Copyright
-Read license.txt
+Lire license.txt
+
+## Changement 
+ces changement sont dans le github mais pas encore dans le Release actuel 
+-lowercase avertissement 
+
